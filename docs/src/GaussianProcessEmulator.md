@@ -67,7 +67,9 @@ gauss_proc = GaussianProcess(
 
 The Gaussian process above assumes the default kernel: the Squared Exponential kernel, also called 
 the Radial Basis Function (RBF). A different type of kernel can be specified when the Gaussian process 
-is initialized. For the `GaussianProcess.jl` package, there are [a range of kernels](https://stor-i.github.io/GaussianProcesses.jl/latest/kernels). 
+is initialized. 
+
+For the `GaussianProcess.jl` package, there are [a range of kernels](https://stor-i.github.io/GaussianProcesses.jl/latest/kernels). 
 For example, 
 ```julia
 using GaussianProcesses

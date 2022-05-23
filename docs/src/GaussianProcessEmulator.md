@@ -3,7 +3,9 @@
 A Gaussian process is a type of emulator implemented in `CalibrateEmulateSample.jl`. Gaussian processes
 are a generalization of the Gaussian probability distribution, extended to functions rather than random variables.
 To build a Gaussian process, we first define a prior over all possible functions. Then we can introduce 
-data and narrow down all the possible functions that agree with this data. This gives the posterior over functions.
+data using Bayes theorem and narrow down all the possible functions that agree with this data. 
+This gives us the posterior over functions. We can make predictions using the posterior Gaussian process, 
+to predict a mean function and covariance for new data points.
 
 A useful resource to learn about Gaussian processes is [Rasmussen and Williams (2006)](http://gaussianprocess.org/gpml/).
 

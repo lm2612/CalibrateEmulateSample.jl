@@ -5,7 +5,7 @@ are a generalization of the Gaussian probability distribution, extended to funct
 To build a Gaussian process, we first define a prior over all possible functions. Then we can introduce 
 data and narrow down all the possible functions that agree with this data. This gives the posterior over functions.
 
-A good resource to learn about Gaussian processes is [Rasmussen and Williams, (2006)](http://gaussianprocess.org/gpml/).
+A useful resource to learn about Gaussian processes is [Rasmussen and Williams (2006)](http://gaussianprocess.org/gpml/).
 
 
 # Implementation
@@ -63,9 +63,9 @@ gauss_proc = GaussianProcess(
 
 # Kernels
 
-The Gaussian process above assumes the default kernel: the Squared Exponential kernel, also called the Radial Basis Function (RBF).
-A different type of kernel can be specified when the Gaussian process is initialized. For the `GaussianProcess.jl` package,
-there are [a range of kernels](https://stor-i.github.io/GaussianProcesses.jl/latest/kernels). 
+The Gaussian process above assumes the default kernel: the Squared Exponential kernel, also called 
+the Radial Basis Function (RBF). A different type of kernel can be specified when the Gaussian process 
+is initialized. For the `GaussianProcess.jl` package, there are [a range of kernels](https://stor-i.github.io/GaussianProcesses.jl/latest/kernels). 
 For example, 
 ```julia
 using GaussianProcesses
@@ -74,7 +74,8 @@ gauss_proc = GaussianProcess(
     gppackage;
     kernel = my_kernel )
 ```
-You do not need to provide useful hyperparameter values, these are learned in `optimize_hyperparameters!(emulator)`.
+You do not need to provide useful hyperparameter values, these are learned in 
+`optimize_hyperparameters!(emulator)`.
 
 You can also combine kernels together through linear operations, for example,
 ```julia
@@ -90,8 +91,8 @@ gauss_proc = GaussianProcess(
 
 # Learning the noise
 
-Often it is useful to learn the noise of the data by adding a white noise kernel. This is added with the Boolean keyword `noise_learn` when
-initializing the Gaussian process. The default is true. 
+Often it is useful to learn the noise of the data by adding a white noise kernel. This is added with the 
+Boolean keyword `noise_learn` when initializing the Gaussian process. The default is true. 
 
 ```julia
 gauss_proc = GaussianProcess(
@@ -99,6 +100,9 @@ gauss_proc = GaussianProcess(
     noise_learn = true )
 ```
 
-When `noise_learn` is true, an additional white noise kernel is added to the kernel. The hyperparameters of the white noise kernel
-are learned in `optimize_hyperparameters!(emulator)`. Note that this is done after transforming to the decorrelated space (link to 
-emulator page that describes this).
+When `noise_learn` is true, an additional white noise kernel is added to the kernel. The hyperparameters 
+of the white noise kernel are learned in `optimize_hyperparameters!(emulator)`. Note that this is done after 
+transforming to the decorrelated space (see docs on Emulators).
+
+
+

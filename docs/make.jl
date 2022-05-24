@@ -17,11 +17,13 @@ api = ["CalibrateEmulateSample" => [
 ]
 
 examples = ["Lorenz example" => "examples/lorenz_example.md"]
+gaussianprocess = ["Gaussian Process" => "GaussianProcessEmulator.md"]
 
 pages = [
     "Home" => "index.md",
     "Installation instructions" => "installation_instructions.md",
     "Examples" => examples,
+    "Gaussian Process" => gaussianprocess,
     "API" => api,
 ]
 
